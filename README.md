@@ -14,7 +14,7 @@ Open **index.html** in Edge or Chrome. Everything required to present is local, 
 | 4 | 3:00–6:00 | Governed run and demo handoff |
 | 5 | 6:00–7:00 | Independently verifiable record |
 
-The timed script is in **speaker-notes.md** and the deck’s Notes view. **demo-runbook.md** provides live handoff and fallback cues. The included film is a visualization of an October 3 run against a **simulated ONTAP cluster**, sourced from the existing frontend. It is not a new live run. The current public dashboard also uses synthetic data. A real connected dashboard must be rehearsed separately before presenting it as live. No infrastructure was mutated to make this deck.
+The timed script is in **speaker-notes.md** and the deck’s Notes view. **demo-runbook.md** provides live handoff and fallback cues. The included film is a visualization of an October 3 run against a **simulated ONTAP cluster**, sourced from the existing frontend. It is not a new live run; it is the fallback. The planned demo is a live run of the ARF proxy on the presenter's laptop against a simulated ONTAP cluster, started from ARF's private workspace. The public dashboard uses synthetic data and is not presented as live. No infrastructure was mutated to make this deck.
 
 ## Reuse and evidence
 

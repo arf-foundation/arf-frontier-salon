@@ -30,21 +30,25 @@ The core has Bayesian risk models, but this proxy demonstration uses configured 
 
 3:00–6:00 · 180 seconds
 
-Use the rehearsed governed-run dashboard only if it is connected to the intended environment and its displayed evidence is verified. The existing public dashboard is simulated. Do not call its synthetic controls a live infrastructure run. This deck’s bundled fallback is explicitly a recorded run against simulated ONTAP.
+Switch to the terminal and start the paced live demo. Say: this is the ARF proxy running on this laptop right now, in front of a simulated ONTAP cluster; no real storage is touched. Press Enter for each scene.
 
-3:00–3:35 — Show an allowlisted read. It passes through without a proxy governance-ledger entry. Say “this allowlisted read,” not “all reads are free.”
+3:00–3:20 — Scenes 1–2. The agent sees only the tools ARF has modeled; delete_lun is not even advertised. An allowlisted read passes through and adds no ledger entry. Say “this allowlisted read,” not “all reads are free.”
 
-3:35–4:30 — Show create_snapshot: execution_attempted, completed result, and the independent snapshot_present read-back. The 30-second film summarizes this earlier step; use the run evidence in the rehearsal notes when narrating it.
+3:20–4:00 — Scene 3. create_snapshot: the attempt is recorded before it runs, then a separate read confirms the snapshot exists.
 
-4:30–5:35 — Show the delete waiting for an admin, approval bound to app_data rather than scratch, and unsupported delete_lun refused with zero upstream calls. Never approve or execute a real delete for this talk preparation.
+4:00–5:10 — Scenes 4–5. delete_volume on app_data waits for an admin, and the approver is told why it cannot be undone. The admin approves on a separate channel; the agent has no approve tool. The same approval does not delete scratch. The approved delete then runs and a read confirms it. If asked: in the demo the script plays the admin, and that identity is recorded, not authenticated.
 
-5:35–6:00 — Return to the ledger. In fallback mode play the bundled 30-second film once, then pause and narrate these same beats. It is an existing visualization of the October 3 simulated run, not a new live run or a 90-second capture.
+5:10–5:30 — Scene 6. Unmodeled delete_lun is refused with zero upstream calls.
+
+5:30–6:00 — Scene 7. The chain verifies and an edited entry is caught; a deleted last entry shows only against a head kept outside the file. That leads into slide 5.
+
+If the terminal fails, say “I’ll use the recorded run against simulated ONTAP,” play this slide’s 30-second film once, then narrate the same beats. Never call either a live ONTAP or production run.
 
 ## Slide 5 — A record you can verify
 
 6:00–7:00 · 60 seconds
 
-The film checked the demo proxy’s local ledger. The record a customer pulls and verifies is the hosted API’s audit export.
+What you just saw checked the demo proxy’s local ledger. The record a customer pulls and verifies is the hosted API’s audit export.
 
 The signed audit path gives you hash-chained entries and Ed25519 signatures. With signing enabled, a tenant can export the API audit bundle and verify it offline with the public key. Editing an entry makes the verifier identify a hash mismatch.
 
