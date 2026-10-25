@@ -1,0 +1,12 @@
+ARF AI Frontier Salon presentation, October 2026.
+New presentation content: copyright ARF AI. All rights reserved.
+
+Visual tokens, logo, poster and film reused from arf-foundation/arf-frontend
+at commit 14519ce59d96620cd624459ccc71b633cf35124d.
+The original frontend Apache-2.0 license is retained in licenses/.
+The presentation layout and browser check are adaptations; see provenance.md.
+ARF names and logos remain their owner's marks.
+
+Instrument Sans, Newsreader and JetBrains Mono font subsets retain the
+SIL Open Font License notices in licenses/. Fonts were not modified.
+No license is granted here for private ARF implementation repositories.

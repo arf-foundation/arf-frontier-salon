@@ -1,0 +1,1 @@
+{"name":"arf-frontier-salon","version":"1.0.0","private":true,"description":"Standalone offline Frontier Salon talk, October 27 2026","type":"module","scripts":{"check":"node scripts/check.mjs"},"devDependencies":{"playwright-core":"1.62.1"}}

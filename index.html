@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ARF AI at Frontier Salon: governing agent actions at runtime.">
+<title>ARF AI · Frontier Salon · 27 October 2026</title>
+<link rel="icon" href="assets/arf-icon.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="deck" aria-label="Frontier Salon presentation">
+  <section class="slide title active" aria-label="Slide 1 of 5: Governing agent actions at runtime">
+    <header><span class="brand"><img src="assets/arf-icon.png" alt="">ARF AI</span><span class="eyebrow">FRONTIER SALON / NEW YORK</span></header>
+    <div class="title-copy"><p class="eyebrow blue">THE DECISION BEFORE EXECUTION</p><h1>Governing agent<br>actions at runtime</h1><p class="outcomes"><span class="approve">Approve</span><span class="deny">Deny</span><span class="escalate">Escalate</span></p><p class="subtitle">Record the attempt. Then allow execution.</p></div>
+    <footer><span>Juan Petter <span class="muted">/ ARF AI</span></span><span>27 OCT 2026 <span class="muted">/ FABRIK TRIBECA</span></span><span class="page">01 / 05</span></footer>
+  </section>
+  <section class="slide problem" aria-label="Slide 2 of 5: Agents with write access" hidden>
+    <header><span class="brand"><img src="assets/arf-icon.png" alt="">ARF AI</span><span class="eyebrow">AGENTS WITH WRITE ACCESS</span></header>
+    <div class="problem-copy"><p class="eyebrow blue">PRODUCTION IS THE BOUNDARY</p><h2>Agents now write<br>to production.</h2><p class="editorial">Their decisions are probabilistic.<br>The consequences aren’t.</p><p class="rule">Every proposed write needs a decision<br>before it executes.</p></div>
+    <footer><span>Governing agent actions at runtime</span><span class="page">02 / 05</span></footer>
+  </section>
+  <section class="slide mechanism" aria-label="Slide 3 of 5: Approve, deny, escalate" hidden>
+    <header><span class="brand"><img src="assets/arf-icon.png" alt="">ARF AI</span><span class="eyebrow">THE MECHANISM</span></header>
+    <h2>One proposal. Three outcomes.</h2><p class="lead">Model the action. Evaluate policy and risk.</p>
+    <div class="decision-list">
+      <div class="decision"><h3 class="approve">APPROVE</h3><p>Allowed by policy and risk assessment</p><strong>Record, execute, verify</strong></div>
+      <div class="decision"><h3 class="deny">DENY</h3><p>Unsupported or outside policy</p><strong>No upstream action</strong></div>
+      <div class="decision"><h3 class="escalate">ESCALATE</h3><p>Requires human authority</p><strong>Wait for scoped approval</strong></div>
+    </div>
+    <p class="mechanism-note">In the ONTAP proxy: modeled tools, configured risk priors, reversibility checks.</p>
+    <footer><span>The attempt is recorded before execution. The outcome follows.</span><span class="page">03 / 05</span></footer>
+  </section>
+  <section class="slide demo" aria-label="Slide 4 of 5: A governed run" hidden>
+    <header><span class="brand"><img src="assets/arf-icon.png" alt="">ARF AI</span><span class="eyebrow">THE GOVERNED RUN</span></header>
+    <div class="demo-heading"><h2>The action meets the gate</h2><p class="eyebrow">RECORDED RUN / SIMULATED ONTAP</p></div>
+    <div class="demo-layout"><div class="film"><video id="film" controls preload="metadata" playsinline poster="assets/governed-run-poster.png" aria-label="30-second recorded visualization of an October 3 governed run against simulated ONTAP"><source src="assets/governed-run.mp4" type="video/mp4">Open assets/governed-run.mp4 to view the recording.</video><img class="print-poster" src="assets/governed-run-poster.png" alt="Recorded run showing a delete waiting for scoped approval"><p class="caption">3 OCT 2026 · 30-SECOND RECAP · EXISTING ARF RUN</p></div><div class="demo-beats"><div><span class="eyebrow">01 / READ</span><p>Allowlisted read<br>passes through.</p></div><div><span class="eyebrow">02 / WRITE</span><p>Attempt recorded.<br>Result read back.</p></div><div><span class="eyebrow">03 / DELETE</span><p>Scoped approval.<br>Unknown tool refused.</p></div></div></div>
+    <footer><span>Approve / deny / escalate, visible in the record</span><span class="page">04 / 05</span></footer>
+  </section>
+  <section class="slide close" aria-label="Slide 5 of 5: A record you can verify" hidden>
+    <header><span class="brand"><img src="assets/arf-icon.png" alt="">ARF AI</span><span class="eyebrow">THE RECORD</span></header>
+    <h2>A record you can verify</h2><p class="record-detail">Hash-chained entries. Ed25519 signatures.<br>Offline verification with the public key.</p><p class="qualification">Signed audit path with signing enabled.<br>Completeness requires a separately retained chain head.</p>
+    <p class="closing">Probabilistic in.<br><em>Auditable action out.</em></p>
+    <footer><span>Juan Petter <span class="muted">/ juan@arf-ai.com</span></span><span>arf-ai.com</span><span class="page">05 / 05</span></footer>
+  </section>
+</main>
+<nav id="controls" aria-label="Presentation controls"><button id="prev" aria-label="Previous slide">←</button><span id="counter" aria-live="polite">1 / 5</span><button id="next" aria-label="Next slide">→</button><button id="fullscreen">Fullscreen</button><button id="notes-toggle" aria-expanded="false" aria-controls="notes">Notes</button></nav>
+<aside id="notes" hidden><h2>Speaker notes</h2><p id="timing"></p><div id="note-text"></div><p class="note-help">Notes appear on this screen. Close them before projecting.<br>Arrow keys: slides · N: notes · F: fullscreen · Home / End: first / last</p></aside>
+<script src="talk.js"></script>
+</body></html>
