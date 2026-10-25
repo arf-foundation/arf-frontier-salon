@@ -44,6 +44,8 @@ Use the rehearsed governed-run dashboard only if it is connected to the intended
 
 6:00–7:00 · 60 seconds
 
+The film checked the demo proxy’s local ledger. The record a customer pulls and verifies is the hosted API’s audit export.
+
 The signed audit path gives you hash-chained entries and Ed25519 signatures. With signing enabled, a tenant can export the API audit bundle and verify it offline with the public key. Editing an entry makes the verifier identify a hash mismatch.
 
 Two boundaries matter. A signature protects the record; it does not by itself prove the physical outcome. That is why the independent read matters. And a valid chain does not prove nothing was removed from its end. For completeness you compare against a separately retained chain head.
